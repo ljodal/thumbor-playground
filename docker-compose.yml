@@ -1,0 +1,11 @@
+version: "3"
+services:
+
+    thumbor:
+        build: .
+        ports:
+            - 8888:8888
+        volumes:
+            - ./images:/images
+            - ./cache:/cache
+            - ./thumbor.conf:/etc/thumbor.conf
